@@ -6,7 +6,8 @@ services:
         image: monitorr/monitorr
         container_name: monitorr
         volumes:
-            - ./monitorr:/app
+            - ./monitorr/app:/app
+            - ./monitorr/app/images:/app/images           
         environment:
             - TZ=Europe/Madrid
             - PGID=1000
