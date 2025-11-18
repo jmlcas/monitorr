@@ -1,9 +1,7 @@
-version: '3.3'
-
 services:
 
     monitorr:
-        image: monitorr/monitorr
+        image: monitorr/monitorr:latest
         container_name: monitorr
         volumes:
             - ./monitorr/app:/app
@@ -14,6 +12,5 @@ services:
             - PUID=1000
         ports:
             - "8200:80"
-        restart: unless-stopped
+        restart: unless-stopped       
 
-        
